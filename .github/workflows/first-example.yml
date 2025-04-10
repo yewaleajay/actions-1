@@ -3,7 +3,7 @@ name: my first work flow
 on: push
 
 jobs:
-    fist_jobs:
+    first_jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Welcome message
