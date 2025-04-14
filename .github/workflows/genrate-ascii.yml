@@ -8,20 +8,26 @@
         - name: Checkout Repo
           uses: actions/checkout@v4
 
-        - name: Install Cowsay PROOGRAM
-          run: sudo apt-get install cowsay -y 
-
-        - name: Execute Cowsay CMD
-          run: cowsay -f dragon "Run for cover, I am DRAGON....RAWR" >> dragon.txt
-
-        - name: Test File Exists
-          run: grep -i "dragon" dragon.txt
-
-        - name: Read File
-          run: cat dragon.txt
-
-        - name: List Repo File
+        - name: List Repo files
           run: ls -lrta
+          
+        - name: exec. shell script
+          run: ./ascii-script.sh
+
+        # - name: Install Cowsay PROOGRAM
+        #   run: sudo apt-get install cowsay -y 
+
+        # - name: Execute Cowsay CMD
+        #   run: cowsay -f dragon "Run for cover, I am DRAGON....RAWR" >> dragon.txt
+
+        # - name: Test File Exists
+        #   run: grep -i "dragon" dragon.txt
+
+        # - name: Read File
+        #   run: cat dragon.txt
+
+        # - name: List Repo File
+        #   run: ls -lrta
           
 
 
