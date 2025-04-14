@@ -11,7 +11,7 @@
         - name: List Repo files
           run: ls -lrta
           
-        - name: exec. shell script
+        - name: execute shell script
           run: |
             chmod +x ascii-script.sh
             ./ascii-script.sh
