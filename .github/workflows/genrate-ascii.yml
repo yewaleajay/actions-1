@@ -13,7 +13,7 @@
           
         - name: exec. shell script
           run: |
-            chmod +x ascii-script.sh
+            chmod +x ./ascii-script.sh
             ./ascii-script.sh
 
         # - name: Install Cowsay PROOGRAM
