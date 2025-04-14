@@ -15,7 +15,7 @@ jobs:
             ls -lrta
             cat README.md
         - name: Genrate Ascii artwork
-          run: cowsay -f dragon "Run for cover, I am DRAGON"....RAWR" >> dragon.txt
+          run: cowsay -f dragon "Run for cover, I am DRAGON....RAWR" >> dragon.txt
 
         # - name: List files
         #   run: ls
