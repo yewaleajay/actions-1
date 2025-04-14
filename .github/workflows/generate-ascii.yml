@@ -13,9 +13,11 @@
           
         - name: execute shell script
           run: |
-            cd .github/workflows/
             chmod +x ascii-script.sh
             ./ascii-script.sh
+            # cd .github/workflows/
+            # chmod +x ascii-script.sh
+            # ./ascii-script.sh
 
         # - name: Install Cowsay PROOGRAM
         #   run: sudo apt-get install cowsay -y 
