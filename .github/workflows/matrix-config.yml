@@ -8,7 +8,11 @@ jobs:
     strategy:
         matrix:
           os: ["windows-latest","ubuntu-latest","ubuntu-20.04"]
-          image: ["busybox","nginx"]
+          image: ["alpine"]
+          exclude: 
+          -  images: "alpine"
+             os: windows-latest
+
     runs-on: ${{matrix.os}}
     steps:
     - name: Echo Doker Details
