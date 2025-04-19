@@ -4,21 +4,27 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  deploy-on-ubuntu:
-    runs-on: ubuntu-latest
+  deploy:
+    strategy:
+        matrix:
+          os: ["windows-latest","ubuntu-latest","ubuntu-20.04"]
+          image: ["busybox","nginx"]
+    runs-on: ${{matrix.os}}
     steps:
     - name: Echo Doker Details
       run: docker info
     
-    - name: Run Images
-      run: docker run hello-world
-  deploy-on-windows:
-    runs-on: windows-latest
-    steps:
-      - name: Echo Docker Details
-        run: docker info
-      - name: Run Images
-        run: docker run hello-world
+    - name: Run Images on ${{matrix.os}}
+      run: docker run ${{matrix.image}}
+
+
+      #   deploy-on-windows:
+#     runs-on: windows-latest
+#     steps:
+#       - name: Echo Docker Details
+#         run: docker info
+#       - name: Run Images
+#         run: docker run hello-world
 
 
 
