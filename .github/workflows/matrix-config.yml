@@ -12,7 +12,9 @@ jobs:
           exclude: 
             - images: "nginx"
               os: windows-latest
-
+          include: 
+            - images: "busybox"
+              os: ubuntu-latest
     runs-on: ${{matrix.os}}
     steps:
     - name: Echo Doker Details
