@@ -8,9 +8,9 @@ jobs:
     strategy:
         matrix:
           os: ["windows-latest","ubuntu-latest","ubuntu-20.04"]
-          image: ["alpine"]
+          image: ["nginx"]
           exclude: 
-          -  images: "alpine"
+          -  images: "nginx"
              os: windows-latest
 
     runs-on: ${{matrix.os}}
