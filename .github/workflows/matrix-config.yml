@@ -10,10 +10,10 @@ jobs:
           os: ["windows-latest","ubuntu-latest","ubuntu-20.04"]
           image: ["nginx"]
           exclude: 
-            - images: "nginx"
+            - image: "nginx"
               os: windows-latest
           include: 
-            - images: "busybox"
+            - image: "busybox"
               os: ubuntu-latest
     runs-on: ${{matrix.os}}
     steps:
